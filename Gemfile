@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 # gem 'mysql2', '0.3.20'
-gem   'pg'
+gem   'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -24,7 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'devise', '~> 4.1.0'
 gem 'carrierwave', '~> 0.9'
-gem "rmagick", "~> 2.13.1"
+# gem "rmagick", "~> 2.13.1"
 gem 'jquery-ui-rails'
 gem 'ransack', '~> 1.7'
 gem 'friendly_id', '~> 5.1'
@@ -32,7 +32,8 @@ gem 'acts_as_follower', '~> 0.2.1'
 
 gem 'rails_12factor', group: :production
 gem 'newrelic_rpm'
-
+gem 'pagerduty'
+gem 'exception_notification', '~> 4.1.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

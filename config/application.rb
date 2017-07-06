@@ -22,5 +22,14 @@ module StweetApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    Rails.application.config.middleware.use ExceptionNotification::Rack,
+                                            :email => {
+                                              :email_prefix => "[PREFIX] ",
+                                              :sender_address => %{"notifier" <notifier@example.com>},
+                                              :exception_recipients => %w{exceptions@example.com}
+                                            },
+                                            :pd => {
+                                              # simple notifier options
+                                            }
   end
 end

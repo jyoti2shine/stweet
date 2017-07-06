@@ -8,11 +8,12 @@
 # username: root
 # password: root
 
- production:
-   adapter: postgresql
-   encoding: unicode
-   database: stweet
-   pool: 5
-   host: localhost
-   username: pguser-name
-   password: pguser-name
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: stweet_development
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
